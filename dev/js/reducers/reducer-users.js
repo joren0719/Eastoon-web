@@ -7,7 +7,8 @@ export default function() {
             last:"ren",
             age:25,
             description:"lalala",
-            thumbnail:"http://i.imgur.com/7yUvePI.jpg"
+            thumbnail:"http://i.imgur.com/7yUvePI.jpg",
+            location:""
         },
         {
             id:2,
@@ -15,7 +16,8 @@ export default function() {
             last:"is awesome",
             age:25,
             description:"lalala",
-            thumbnail:"http://i.imgur.com/52xRlm8.jpg"
+            thumbnail:"http://i.imgur.com/52xRlm8.jpg",
+            location:""
         },
         {
             id:3,
@@ -23,7 +25,8 @@ export default function() {
             last:"haha",
             age:25,
             description:"lalala",
-            thumbnail:"http://i.imgur.com/4emTXHB.jpg"
+            thumbnail:"http://i.imgur.com/4emTXHB.jpg",
+            location:""
         }
     ]
 }
