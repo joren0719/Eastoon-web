@@ -1,6 +1,6 @@
-export default function (state = null, action) {
+export default function (state = [], action) {
     switch(action.type) {
-        case "USER_SELECTED":
+        case "ITEM_SEARCHED":
             return action.payload;
             break;
     }

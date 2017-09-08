@@ -1,32 +1,7 @@
-export default function() {
-    console.log('we are at red-user');
-    return[
-        {
-            id:1,
-            first:"johnny",
-            last:"ren",
-            age:25,
-            description:"lalala",
-            thumbnail:"http://i.imgur.com/7yUvePI.jpg",
-            location:""
-        },
-        {
-            id:2,
-            first:"johnny",
-            last:"is awesome",
-            age:25,
-            description:"lalala",
-            thumbnail:"http://i.imgur.com/52xRlm8.jpg",
-            location:""
-        },
-        {
-            id:3,
-            first:"lalala",
-            last:"haha",
-            age:25,
-            description:"lalala",
-            thumbnail:"http://i.imgur.com/4emTXHB.jpg",
-            location:""
-        }
-    ]
-}
+import a from './reducer-BagClosingMachine';
+import b from './reducer-BagClosingParts';
+import c from './reducer-Domestic';
+
+export default function(){
+    return b()//.concat(b(),c())
+};

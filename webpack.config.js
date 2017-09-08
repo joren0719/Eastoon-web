@@ -17,8 +17,16 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader!sass-loader'
+                test: /\.(png|jpg)$/,
+                loader: 'url?limit=250000'
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
+            },
+            {
+                test: /\.css$/, // Only .css files
+                loader: 'style!css' // Run both loaders
             }
         ]
     },

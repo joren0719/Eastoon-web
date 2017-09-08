@@ -10,17 +10,15 @@ class UserDetail extends Component {
             return(<h4>Select a user...</h4>)
         }
 
-
         return (
             <div>
-                <img src={this.props.user.thumbnail}/>
-                <h2>{this.props.user.first} {this.props.user.last}</h2>
-                <h3>Ages: {this.props.user.age}</h3>
+                <h1>{this.props.search}</h1>
+                <img src={this.props.user.piclocation}/>
+                <h2>{this.props.user.productType} {this.props.user.productName}</h2>
+                <h3>catagory: {this.props.user.catagory}</h3>
                 <h3>description: {this.props.user.description}</h3>
             </div>
         )
-
-
     }
 
 
@@ -28,8 +26,10 @@ class UserDetail extends Component {
 
 function mapStateToProps(state) {
     return {
-        user: state.activeUser
+        user: state.activeUser,
+        search: state.searchUser
     };
+
 }
 
 export default connect(mapStateToProps)(UserDetail);

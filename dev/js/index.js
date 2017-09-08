@@ -2,9 +2,10 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {compose, createStore} from 'redux';
 import allReducers from './reducers';
 import App from './components/app';
+import { reducer as searchReducer, reduxSearch } from 'redux-search'
 // import {Provider} from 'react-redux';
 // import {createStore, applyMiddleware} from 'redux';
 // import thunk from 'redux-thunk';

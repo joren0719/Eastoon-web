@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {selectUser} from '../actions/index'
+import {actions} from '../actions/index'
 
 
 class UserList extends Component {
 
 
     createListItems() {
-        return this.props.users.map((user) => {
+        return this.props.users.map((userz) => {
+
             return (
                 <li
-                    key={user.id}
-                    onClick={() => this.props.selectUser(user)}
+                    key={userz.id}
+                    onClick={() => this.props.selectUsers(userz)}
                 >
-                    {user.first} {user.last}
+
+                    {userz.model}
                 </li>
             )
         });
@@ -34,13 +36,14 @@ class UserList extends Component {
 
 function mapStateToProps(state) {
     return {
-        users: state.users
+        users: state.userss
     };
 }
 
 function matchDispatchToProps(dispatch){
     return bindActionCreators({
-        selectUser: selectUser
+        selectUsers: actions.selectUser             //Key field name is called by components
+                                             //Value field name is imported from other file
     }, dispatch)
 
 }

@@ -1,5 +1,16 @@
-$primary: #006699;
+$primary: #006660;
 
 h2 {
-	color: $primary;
+	color: #006600;
+};
+
+.center {
+	text-align: center;
+};
+
+.awayfromtop {
+	text-align: right;
+	margin: auto;
+    width: 70%;
+    padding: 10px;
 }
