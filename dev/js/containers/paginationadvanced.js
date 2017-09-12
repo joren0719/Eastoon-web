@@ -15,7 +15,7 @@ class Paginationadvanced extends Component {
                 ellipsis
                 boundaryLinks
                 items={this.props.items}
-                maxButtons={5}
+                maxButtons={10}
                 activePage={this.props.activePage}
                 onSelect={(key)=>this.props.pageSelect(key)} />
         )

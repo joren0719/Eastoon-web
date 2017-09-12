@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --public"
   },
   "license": "ISC",
   "dependencies": {
@@ -23,7 +23,6 @@
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.10",
     "node-libs-browser": "^1.0.0",
-    "node-sass": "^3.8.0",
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-bootstrap": "^0.31.2",
@@ -37,7 +36,6 @@
     "redux-search": "^2.3.3",
     "redux-thunk": "^2.1.0",
     "reselect": "^3.0.1",
-    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url": "^0.11.0",
     "url-loader": "^0.5.9",

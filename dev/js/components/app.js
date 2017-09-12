@@ -8,7 +8,7 @@ import NavHoverDrop from '../containers/nav-dropdown';
 import ItemSearchResult from '../containers/item-searchresult';
 import ItemSearchAction from '../containers/item-searchaction';
 import { Button, Navbar, Nav, NavItem ,NavDropdown,MenuItem,Grid,Row,Col,OverlayTrigger,Tooltip  } from 'react-bootstrap';
-require('../../scss/style.scss');
+//require('../../scss/style.css');
 
 
 //this app function prints some html surrended by <h2>, then calls the 'UserList' component.

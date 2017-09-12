@@ -1,6 +1,7 @@
 branch-defaults:
   master:
-    environment: Eastoon
+    environment: Eastoon-web-dev
+    group_suffix: null
 global:
   application_name: Eastoon-web
   branch: null

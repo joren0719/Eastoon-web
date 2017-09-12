@@ -8,7 +8,7 @@ class ItemSearchAction extends Component {
 
     render() {
         return (
-            <div className='awayfromtop'>
+            <div id='awayfromtop'>
                 <input
                     type="text"
                     onChange={event => this.props.searchHandler(event.target.value)}

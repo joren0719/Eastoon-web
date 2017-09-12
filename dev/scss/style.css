@@ -1,25 +1,30 @@
-$primary: #006660;
 
-html, body {
-  margin: 0px;
-  padding: 0px;
-  bottom: 40px;
-  height: 400px;
-};
 
-h2 {
+.toright {
+    text-align: right;
 	color: #006600;
-};
+}
 
-img.thumb {
-	max-height: 250px;
-    max-width:350px;
-};
+
+#awayfromtop {
+	text-align: right;
+	margin: auto;
+	right: 10px;
+    padding: 10px;
+}
+
+
+
+
+img.thumb{
+    max-width: 200px;
+    max-height: 150px;
+}
 
 img.detail {
 	width:100%;
-	max-width:600px;
-};
+	max-width:500px;
+}
 
 .header{
     position: fixed;
@@ -54,15 +59,6 @@ img.detail {
   }
 
 
-
 .center {
 	text-align: center;
-};
-
-.awayfromtop {
-	text-align: right;
-	margin: auto;
-	right: 10px;
-    width: 90%;
-    padding: 10px;
 }

@@ -6,22 +6,23 @@ import {actions} from '../actions/index';
 import { Col,Row,Grid,Tabs,Tab } from 'react-bootstrap';
 import ItemSearchLocalAction from './item-searchlocalaction';
 import NavHoverDrop from './nav-dropdown';
-import Paginationadvanced from './paginationadvanced'
+import Paginationadvanced from './paginationadvanced';
+require('../../scss/style.css');
 
 class ActiveStage extends Component {
     render () {
 
 
         var pagenum = this.props.activePage;
-        var activeContentStart = (pagenum-1)*48; //slice end not included
-        var activeContentEnd = (pagenum)*48;
+        var activeContentStart = (pagenum-1)*20; //slice end not included
+        var activeContentEnd = (pagenum)*20;
 
 
 
     if(this.props.globalsearch==''){
             switch(this.props.activestage){
                 case "Home":
-                    return(<div>Home!!!!</div>)
+                    return(<div id='toright'>Home</div>)
                     break;
                 case "About":
                     return(<div>Eastoon Products</div>)
@@ -38,11 +39,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150"  src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -55,11 +56,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('Fischbein')).filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('Fischbein')).filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -72,11 +73,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('GoldenLion')).filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('GoldenLion')).filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -89,11 +90,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('GoldenLion')).filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(filterbyType('GoldenLion')).filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -141,11 +142,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -159,11 +160,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Accessories')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Accessories')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -176,11 +177,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Model_100_200')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Model_100_200')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -193,11 +194,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Model_D_E_F')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein-Model_D_E_F')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -210,11 +211,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Fischbein')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -227,11 +228,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('NLI&NEWLONG')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('NLI&NEWLONG')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -244,11 +245,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('UnionSpecial')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('UnionSpecial')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -261,11 +262,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Other')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.BagClosingParts.filter(filterbyType('Other')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -288,15 +289,15 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
-                                    <Tab eventKey={2} title="BagClosing" ><ItemSearchLocalAction />
+                                    <Tab eventKey={3} title="BagClosing" ><ItemSearchLocalAction />
                                         <div>
                                             <Row>
                                                 {this.props.Industrial.filter(filterbyType('Part-BagClosingPart')).filter(searchingFor(this.props.search)).slice(activeContentStart,activeContentEnd).map(components =>
@@ -305,11 +306,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(filterbyType('Part-BagClosingPart')).filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(filterbyType('Part-BagClosingPart')).filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -322,11 +323,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(filterbyType('Part-SewingPart-Hookbobbin')).filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.Industrial.filter(filterbyType('Part-SewingPart-Hookbobbin')).filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -369,11 +370,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -386,11 +387,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-Accessories')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-Accessories')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -403,11 +404,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-BELTS')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-BELTS')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -420,11 +421,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-Bobbin')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-Bobbin')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -437,11 +438,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-CuttingMat')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part-CuttingMat')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -454,11 +455,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Part')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -471,11 +472,11 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
-                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Machine-SINGER')).filter(searchingFor(this.props.search)).length)/48)} />
+                                            <Paginationadvanced items={Math.ceil((this.props.Domestic.filter(filterbyType('Machine-SINGER')).filter(searchingFor(this.props.search)).length)/20)} />
                                         </Row>
                                     </div>
                                 </Tab.Pane>
@@ -499,11 +500,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.KnittingNeedles.filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.KnittingNeedles.filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -519,15 +520,16 @@ class ActiveStage extends Component {
                                             <Row>
                                                 {this.props.SealerMachine.filter(searchingFor(this.props.search)).slice(activeContentStart,activeContentEnd).map(components =>
                                                 <div
+                                                    id='thumb'
                                                     className='center'
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className='thumb' src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.SealerMachine.filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.SealerMachine.filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -547,11 +549,11 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
-                                                <Paginationadvanced items={Math.ceil((this.props.CustomItem.filter(searchingFor(this.props.search)).length)/48)} />
+                                                <Paginationadvanced items={Math.ceil((this.props.CustomItem.filter(searchingFor(this.props.search)).length)/20)} />
                                             </Row>
                                         </div>
                                     </Tab>
@@ -576,11 +578,11 @@ class ActiveStage extends Component {
                         key={components.id}
                         onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                     >
-                    <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                    <Col sm={6} md={2}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                     </div>)}
                 </Row>
                 <Row className='center'>
-                    <Paginationadvanced items={Math.ceil((this.props.globaldata.filter(searchingFor(this.props.globalsearch)).length)/48)} />
+                    <Paginationadvanced items={Math.ceil((this.props.globaldata.filter(searchingFor(this.props.globalsearch)).length)/20)} />
                 </Row>
             </div>
         )
