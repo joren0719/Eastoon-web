@@ -18,7 +18,7 @@ class ActiveStage extends Component {
 
 
 
-        if(this.props.search==''){
+    if(this.props.globalsearch==''){
             switch(this.props.activestage){
                 case "Home":
                     return(<div>Home!!!!</div>)
@@ -564,29 +564,33 @@ class ActiveStage extends Component {
                 }
 
 
-        }
+
     }
     else {
-        <div>
-            <Row>
-                {this.props.globaldata.filter(searchingFor(this.props.globalsearch)).slice(activeContentStart,activeContentEnd).map(components =>
-                <div
-                    className='center'
-                    key={components.id}
-                    onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
-                >
-                <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
-                </div>)}
-            </Row>
-            <Row className='center'>
-                <Paginationadvanced items={Math.ceil((this.props.globaldata.filter(searchingFor(this.props.globalsearch)).length)/48)} />
-            </Row>
-        </div>
+        return (
+            <div>
+                <Row>
+                    {this.props.globaldata.filter(searchingFor(this.props.globalsearch)).slice(activeContentStart,activeContentEnd).map(components =>
+                    <div
+                        className='center'
+                        key={components.id}
+                        onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
+                    >
+                    <Col sm={6} md={2}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                    </div>)}
+                </Row>
+                <Row className='center'>
+                    <Paginationadvanced items={Math.ceil((this.props.globaldata.filter(searchingFor(this.props.globalsearch)).length)/48)} />
+                </Row>
+            </div>
+        )
+
     }
-
-
-
+    }
 }
+
+
+
 function mapStateToProps(state){
     return {
         activestage: state.activeStage,
