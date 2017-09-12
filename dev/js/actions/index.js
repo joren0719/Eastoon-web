@@ -35,5 +35,23 @@ export const actions = {
             type: "MOUSE_ENTERED",
             payload: false
         }
+    },
+    openModal: () => {
+        return {
+            type: "OPEN_MODAL",
+            payload: true
+        }
+    },
+    closeModal: () => {
+        return {
+            type: "CLOSE_MODAL",
+            payload: false
+        }
+    },
+    handleSelect: (pagestate) => {
+        return {
+            type: "PAGE_SELECTED",
+            payload: pagestate
+        }
     }
 }

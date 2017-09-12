@@ -11,7 +11,7 @@ class ItemSearchLocalAction extends Component {
             <div className='awayfromtop'>
                 <input
                     type="text"
-                    onChange={event => this.props.searchLocalHandler(event.target.value)}
+                    onChange={event => {this.props.searchLocalHandler(event.target.value);this.props.pageSelect(1)}}
                     placeholder='Search...'
                 />
             </div>
@@ -27,7 +27,8 @@ function mapStateToProps(state){
 
 function matchDispatchToProps(dispatch){
     return bindActionCreators({
-        searchLocalHandler: actions.searchLocalHandler
+        searchLocalHandler: actions.searchLocalHandler,
+        pageSelect: actions.handleSelect
     }, dispatch)
 
 }

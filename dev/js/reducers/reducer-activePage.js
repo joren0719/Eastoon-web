@@ -1,6 +1,6 @@
-export default function (state = [], action) {
+export default function (state = 1, action) {
     switch(action.type) {
-        case "USER_SELECTED":
+        case "PAGE_SELECTED":
             return action.payload;
             break;
     }

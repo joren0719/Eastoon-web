@@ -8,6 +8,12 @@ import ActiveStage from './reducer-activeStage';
 import BagClosingMachine from './reducer-BagClosingMachine';
 import BagClosingParts from './reducer-BagClosingParts';
 import Industrial from './reducer-Industrial';
+import Domestic from './reducer-Domestic';
+import KnittingNeedles from './reducer-KnittingNeedles';
+import SealerMachine from './reducer-SealerMachine';
+import CustomItem from './reducer-CustomItem';
+import Modal from './reducer-modal';
+import activePage from './reducer-activePage'
 
 const allReducers = combineReducers({
     userss: UserReducers,
@@ -18,7 +24,13 @@ const allReducers = combineReducers({
     activeStage: ActiveStage,
     BagClosingMachine: BagClosingMachine,
     BagClosingParts: BagClosingParts,
-    Industrial: Industrial
+    Industrial: Industrial,
+    Domestic: Domestic,
+    KnittingNeedles: KnittingNeedles,
+    SealerMachine: SealerMachine,
+    CustomItem: CustomItem,
+    Modal: Modal,
+    activePage: activePage
 
 });
 export default allReducers;

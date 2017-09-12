@@ -10409,7 +10409,7 @@ export default function() {
           productType: 'UnionSpecial',
           productName: '10008',
           description: '10008',
-          thumbnail: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/Thumbnail/10008(s).jpg',
+          thumbnail: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingParts/UnionSpecial/10008.jpg',
           piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingParts/UnionSpecial/10008.jpg' },{ id: '1_34',
           catagory: 'BagClosingParts',
           productType: 'UnionSpecial',

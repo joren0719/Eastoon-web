@@ -1,8 +1,59 @@
 $primary: #006660;
 
+html, body {
+  margin: 0px;
+  padding: 0px;
+  bottom: 40px;
+  height: 400px;
+};
+
 h2 {
 	color: #006600;
 };
+
+img.thumb {
+	max-height: 250px;
+    max-width:350px;
+};
+
+img.detail {
+	width:100%;
+	max-width:600px;
+};
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+
+}
+
+
+.content {
+    position: fixed;
+    top: 50px;
+    bottom: 40px;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    overflow-x:hidden;
+
+}
+
+.footer {
+	  color: white;
+      background-color: black;
+      border-top: 1px solid #E7E7E7;
+      text-align: center;
+      position: fixed;
+      bottom: 0px;
+      height: 40px;
+      width: 100%;
+  }
+
+
 
 .center {
 	text-align: center;
@@ -11,6 +62,7 @@ h2 {
 .awayfromtop {
 	text-align: right;
 	margin: auto;
-    width: 70%;
+	right: 10px;
+    width: 90%;
     padding: 10px;
 }

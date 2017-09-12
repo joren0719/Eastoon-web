@@ -8,7 +8,7 @@ import { Col,Row,Grid  } from 'react-bootstrap';
 class ItemSearchResult extends Component {
 
     render() {
-            console.log(this.props.users);
+        console.log(this.props.users);
 
         if(this.props.search==''){
             return(<h4>Search...</h4>)
