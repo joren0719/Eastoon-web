@@ -1,3 +1,14 @@
 .idea
 node_modules
-web_data
+web_data
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+*.jpg
+*.png
+web_data/images/zothers/logo.png.org
+*.gif
+web_data/images/zHome/SINGER143.swf
+web_data/images/Thumbnail/desktop.ini
+*.ini
