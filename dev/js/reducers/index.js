@@ -16,7 +16,6 @@ import Modal from './reducer-modal';
 import activePage from './reducer-activePage'
 
 const allReducers = combineReducers({
-    userss: UserReducers,
     activeUser: ActiveUserReducer,
     searchItem: SearchItemReducer,
     localsearchItem: SearchLocalItemReducer,
@@ -30,7 +29,7 @@ const allReducers = combineReducers({
     SealerMachine: SealerMachine,
     CustomItem: CustomItem,
     Modal: Modal,
-    activePage: activePage
-
+    activePage: activePage,
+    userss: UserReducers
 });
 export default allReducers;
