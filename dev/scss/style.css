@@ -1,5 +1,3 @@
-
-
 .toright {
     text-align: right;
 	color: #006600;
@@ -14,7 +12,9 @@
 }
 
 
-
+.wide {
+    width:700px;
+}
 
 img.thumb{
     max-width: 200px;

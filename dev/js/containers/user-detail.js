@@ -25,7 +25,7 @@ class UserDetail extends Component {
       render() {
 
         return (
-                <Modal show={this.props.Modal} onHide={() =>this.props.closeModal()}>
+                <Modal dialogClassName='wide' show={this.props.Modal} onHide={() =>this.props.closeModal()}>
                   <Modal.Header closeButton>
                     <Modal.Title>{this.props.user.productName}</Modal.Title>
                   </Modal.Header>
