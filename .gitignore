@@ -1,6 +1,7 @@
 .idea
 node_modules
-web_data
+web_data
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

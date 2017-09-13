@@ -297,7 +297,7 @@ class ActiveStage extends Component {
                                             </Row>
                                         </div>
                                     </Tab>
-                                    <Tab eventKey={3} title="BagClosing" ><ItemSearchLocalAction />
+                                    <Tab eventKey={2} title="BagClosing" ><ItemSearchLocalAction />
                                         <div>
                                             <Row>
                                                 {this.props.Industrial.filter(filterbyType('Part-BagClosingPart')).filter(searchingFor(this.props.search)).slice(activeContentStart,activeContentEnd).map(components =>
