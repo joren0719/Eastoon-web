@@ -7,12 +7,12 @@ import { Col,Row,Grid,Tabs,Tab } from 'react-bootstrap';
 import ItemSearchLocalAction from './item-searchlocalaction';
 import NavHoverDrop from './nav-dropdown';
 import Paginationadvanced from './paginationadvanced';
-require('../../scss/style.css');
+
 
 class ActiveStage extends Component {
     render () {
 
-
+        console.log(this.props.activePage);
         var pagenum = this.props.activePage;
         var activeContentStart = (pagenum-1)*20; //slice end not included
         var activeContentEnd = (pagenum)*20;
@@ -39,7 +39,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150"  src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img    src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -56,7 +56,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -73,7 +73,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -90,7 +90,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={2}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -105,10 +105,10 @@ class ActiveStage extends Component {
                     break;
                 case "BagClosingParts":
                     return(
-                        <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" onClick={() => this.props.pageSelect(1)}>
+                        <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first">
                           <Row className="clearfix">
                             <Col md={12}>
-                              <Nav bsStyle="tabs">
+                              <Nav bsStyle="tabs" onClick={() => this.props.pageSelect(1)}>
                                 <NavItem eventKey={'first'}>
                                   All
                                 </NavItem>
@@ -142,7 +142,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -160,7 +160,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -177,7 +177,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -194,7 +194,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -211,7 +211,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -228,7 +228,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -245,7 +245,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -262,7 +262,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -289,7 +289,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -306,7 +306,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -323,7 +323,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -339,10 +339,10 @@ class ActiveStage extends Component {
 
                 case "Domestic":
                     return(
-                        <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" onClick={() => this.props.pageSelect(1)}>
+                        <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
                           <Row className="clearfix">
                             <Col md={12}>
-                              <Nav bsStyle="tabs">
+                              <Nav bsStyle="tabs" onClick={() => this.props.pageSelect(1)}>
                                 <NavItem eventKey={'first'}>
                                   All
                                 </NavItem>
@@ -370,7 +370,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -387,7 +387,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -404,7 +404,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -421,7 +421,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -438,7 +438,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -455,7 +455,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -472,7 +472,7 @@ class ActiveStage extends Component {
                                                 key={components.id}
                                                 onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                             >
-                                            <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                            <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                             </div>)}
                                         </Row>
                                         <Row className='center'>
@@ -500,7 +500,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -525,7 +525,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className='thumb' src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className='thumb' src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -549,7 +549,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={3}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -578,7 +578,7 @@ class ActiveStage extends Component {
                         key={components.id}
                         onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                     >
-                    <Col sm={6} md={2}><Row><img width="200" height="150" className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                    <Col sm={6} md={2}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                     </div>)}
                 </Row>
                 <Row className='center'>

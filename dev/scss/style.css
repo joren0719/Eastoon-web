@@ -22,8 +22,8 @@ img.thumb{
 }
 
 img.detail {
-	width:100%;
-	max-width:500px;
+	max-height:480px;
+	max-width:640px;
 }
 
 .header{

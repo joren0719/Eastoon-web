@@ -32,7 +32,7 @@ class UserDetail extends Component {
                   <Modal.Body>
                       <div className="center">
                           <h1>{this.props.search}</h1>
-                          <img width='500' className="detail" src={this.props.user.piclocation}/>
+                          <img className="detail" src={this.props.user.piclocation}/>
                           <h2>{this.props.user.productType} {this.props.user.productName}</h2>
                           <h3>catagory: {this.props.user.catagory}</h3>
                           <h3>description: {this.props.user.description}</h3>
