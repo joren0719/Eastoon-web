@@ -23,7 +23,6 @@ class UserDetail extends Component {
       }
 
       render() {
-
         return (
                 <Modal dialogClassName='wide' show={this.props.Modal} onHide={() =>this.props.closeModal()}>
                   <Modal.Header closeButton>
@@ -31,7 +30,6 @@ class UserDetail extends Component {
                   </Modal.Header>
                   <Modal.Body>
                       <div className="center">
-                          <h1>{this.props.search}</h1>
                           <img className="detail" src={this.props.user.piclocation}/>
                           <h2>{this.props.user.productType} {this.props.user.productName}</h2>
                           <h3>catagory: {this.props.user.catagory}</h3>
@@ -74,8 +72,7 @@ class UserDetail extends Component {
 function mapStateToProps(state) {
     return {
         Modal: state.Modal,
-        user: state.activeUser,
-        search: state.searchUser
+        user: state.activeUser
     };
 
 }

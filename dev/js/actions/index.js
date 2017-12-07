@@ -53,5 +53,11 @@ export const actions = {
             type: "PAGE_SELECTED",
             payload: pagestate
         }
+    },
+    selectMachine: (machine) => {
+        return {
+            type: "MACHINE_SELECTED",
+            payload: machine
+        }
     }
 }

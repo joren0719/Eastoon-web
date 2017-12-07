@@ -46,15 +46,29 @@ export default function() {
           catagory: 'BagClosingMachine',
           productType: 'GoldenLion',
           productName: 'GL-F',
-          description: 'GL-F',
+          descriptionHead:'MODEL : GL-F',
+          description:
+            [
+                'HIGH- SPEED TYPE WITH PLASTIC HANDLE & LUBRICATOR','Single Thread Chain Stitch','Features:','*High Speed Type With Plastic Handle & Lubricator','*Automatic thread cutting','*Oil pump lubrication system','*Trouble-free continuous operation','*For craft paper, cotton, hessian, jute, pp/pe woven cloth and other bag materials','OPTIONAL USAGE:','*Spring Balancer with Hanger','*Tape Binding Attachment','*Shoulder Belt','*Presser foot lifter','*Thread cone cover'
+            ],
           thumbnail: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/Thumbnail/GL-F(s).jpg',
-          piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingMachine/GoldenLion/GL-F.jpg' },{ id: '0_20',
+          piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingMachine/GoldenLion/GL-F.jpg',
+          video: 'https://www.youtube.com/watch?v=7BLVNdk_izw'},{ id: '0_20',
           catagory: 'BagClosingMachine',
           productType: 'Siruba',
           productName: 'AA-6',
-          description: 'AA-6',
+          descriptionHead:'PORTABLE BAG CLOSER',
+          description: 'Light weight, easy operation with automatic thread cutter and presser foot lifter. Equipped with lubricating device for oiling and prolonging machine lift. For closing all kinds of paper, cotton, PP/PE and gunny bags for packing feed, seeds, fertilizer, flour, chemical powder etc., Also available for closing textile end-joint before dyeing.',
           thumbnail: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/Thumbnail/AA-6(s).jpg',
-          piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingMachine/Siruba/AA-6.jpg' }    ]
+          piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/BagClosingMachine/Siruba/AA-6.jpg',
+          video: 'https://www.youtube.com/watch?v=_rBJWQpqqSM'},{ id: '0_21',
+          catagory: 'BagClosingMachine',
+          productType: 'Siruba',
+          productName: 'SINGER 143',
+          description: 'Contact us for a price',
+          thumbnail: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/zHome/SINGER143.jpg',
+          piclocation: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/images/zHome/SINGER143.jpg',
+          video: 'https://s3-us-west-2.amazonaws.com/eastoon/web_data/SINGER143.mp4'}    ]
 }
 
 

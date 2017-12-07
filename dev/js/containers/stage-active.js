@@ -1,12 +1,14 @@
-import { Button, Navbar, Nav, NavItem,NavDropdown,MenuItem } from 'react-bootstrap';
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {actions} from '../actions/index';
-import { Col,Row,Grid,Tabs,Tab } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavItem,NavDropdown,MenuItem, Col,Row,Grid,Tabs,Tab,Carousel } from 'react-bootstrap';
+import Home from '../components/home';
 import ItemSearchLocalAction from './item-searchlocalaction';
+import ItemSearchAction from './item-searchaction';
 import NavHoverDrop from './nav-dropdown';
 import Paginationadvanced from './paginationadvanced';
+require('../../scss/style.css');
 
 
 class ActiveStage extends Component {
@@ -22,10 +24,7 @@ class ActiveStage extends Component {
     if(this.props.globalsearch==''){
             switch(this.props.activestage){
                 case "Home":
-                    return(<div id='toright'>Home</div>)
-                    break;
-                case "About":
-                    return(<div>Eastoon Products</div>)
+                    return(<Home />)
                     break;
                 case "BagClosingMachine":
                     return(
@@ -34,13 +33,14 @@ class ActiveStage extends Component {
                                         <div>
                                             <Row>
                                                 {this.props.BagClosingMachine.filter(searchingFor(this.props.search)).slice(activeContentStart,activeContentEnd).map(components =>
-                                                <div
-                                                    className='center'
-                                                    key={components.id}
-                                                    onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
-                                                >
-                                                <Col sm={6} md={3}><Row><img    src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
-                                                </div>)}
+                                                    <div
+                                                        className='center'
+                                                        key={components.id}
+                                                        onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
+                                                    >
+                                                    <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                    </div>
+                                                )}
                                             </Row>
                                             <Row className='center'>
                                                 <Paginationadvanced items={Math.ceil((this.props.BagClosingMachine.filter(searchingFor(this.props.search)).length)/20)} />
@@ -90,7 +90,7 @@ class ActiveStage extends Component {
                                                     key={components.id}
                                                     onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                                                 >
-                                                <Col sm={6} md={2}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                                                <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                                                 </div>)}
                                             </Row>
                                             <Row className='center'>
@@ -578,7 +578,7 @@ class ActiveStage extends Component {
                         key={components.id}
                         onClick={() => {this.props.selectUsers(components);this.props.openModal()}}
                     >
-                    <Col sm={6} md={2}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
+                    <Col sm={6} md={3}><Row><img   className="thumb" src={components.thumbnail}/></Row><Row>{components.productName}</Row></Col>
                     </div>)}
                 </Row>
                 <Row className='center'>

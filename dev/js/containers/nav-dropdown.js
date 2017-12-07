@@ -30,7 +30,7 @@ class NavHoverDrop extends Component {
             open = {this.state.isOpen}
             onToggle= {() => this.props.isOpen()}//here takes a function that can do something, not necessarily need to open
             title={this.props.title}
-            id="basic-nav-dropdown"
+            id='nav'
           >
             {this.props.children}
           </NavDropdown>

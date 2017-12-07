@@ -1,12 +1,7 @@
-import React from 'react';
-import UserList from '../containers/user-list';
+import React from 'react'
 import UserDetail from '../containers/user-detail';
 import Stage from '../containers/navStage-component';
 import ActiveStage from '../containers/stage-active';
-import {actions} from '../actions/index';
-import NavHoverDrop from '../containers/nav-dropdown';
-import ItemSearchResult from '../containers/item-searchresult';
-import ItemSearchAction from '../containers/item-searchaction';
 import { Button, Navbar, Nav, NavItem ,NavDropdown,MenuItem,Grid,Row,Col,OverlayTrigger,Tooltip  } from 'react-bootstrap';
 require('../../scss/style.css');
 
@@ -37,18 +32,21 @@ function App () {
 
 
         return(
-            <div>
-                <div>
+            <div id='wrapper'>
+                <div id='header'>
                     <Stage />
                 </div>
-                <div className='content'>
+                <div id='content'>
                     <ActiveStage />
                     <UserDetail />
                 </div>
                 <div className='footer'>
-                    <OverlayTrigger placement="top" overlay={tooltip}>
-                        <h4>EASTOON PRODUCTS CO., LTD.</h4>
-                    </OverlayTrigger>
+                        <h4 id='logo'>EASTOON PRODUCTS CO., LTD.</h4>
+                        <p>Address:1F., No.15, Ln. 78, Zhongzheng Rd., Xinzhuang Dist., New Taipei City 24243, Taiwan</p>
+                        <p>Tel: +886 2 2277 0031</p>
+                        <OverlayTrigger placement="top" overlay={tooltip}>
+                            <p><a href="mailto:angel@eastoon.com.tw">Contact Us</a></p>
+                        </OverlayTrigger>
                 </div>
             </div>
         )

@@ -4,8 +4,11 @@ import {connect} from 'react-redux';
 import {actions} from '../actions/index';
 import { Button, Navbar, Nav, NavItem ,NavDropdown,MenuItem,Grid,Row,Col   } from 'react-bootstrap';
 import NavHoverDrop from './nav-dropdown';
-import ItemSearchResult from './item-searchresult';
 import ItemSearchAction from './item-searchaction';
+
+// <NavItem id='nav' eventKey={2} onClick={()=>{
+//     this.props.selectStage('About');
+// }}>About</NavItem>
 
 
 class Stage extends Component {
@@ -13,10 +16,11 @@ class Stage extends Component {
     render() {
         return (
             <div>
-                <Navbar inverse>
+                <Navbar inverse id='navbar'>
                     <Navbar.Header>
                         <Navbar.Brand>
                             <a
+                            id='nav-home'
                             href=""
                             onClick={()=>{
                                 this.props.selectStage('Home')
@@ -29,10 +33,8 @@ class Stage extends Component {
                     </Navbar.Header>
                         <Navbar.Collapse>
                             <Nav>
-                                <NavItem eventKey={2} onClick={()=>{
-                                    this.props.selectStage('About');
-                                }}>About</NavItem>
-                                <NavHoverDrop eventKey={1} title="Components">
+
+                                <NavHoverDrop id='nav' eventKey={1} title="Components">
                                     <MenuItem eventKey={1.1} onClick={()=>{
                                         this.props.selectStage('BagClosingMachine');
                                         this.props.pageSelect(1)
@@ -65,7 +67,7 @@ class Stage extends Component {
 
                           </Nav>
                           <Nav pullRight>
-                            <ItemSearchAction />
+                            <ItemSearchAction ind='homepagesearch'/>
                           </Nav>
                         </Navbar.Collapse>
                 </Navbar>

@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+import Homepagedisplay from './homepage/reducer-homepage_display';
 import UserReducers from './reducer-users';
 import ActiveUserReducer from './reducer-active-user';
 import SearchItemReducer from './reducer-searching';
@@ -30,6 +31,7 @@ const allReducers = combineReducers({
     CustomItem: CustomItem,
     Modal: Modal,
     activePage: activePage,
-    userss: UserReducers
+    userss: UserReducers,
+    homepagedisplay: Homepagedisplay
 });
 export default allReducers;
