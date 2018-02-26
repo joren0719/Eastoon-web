@@ -40,12 +40,12 @@ function App () {
                     <ActiveStage />
                     <UserDetail />
                 </div>
-                <div className='footer'>
+                <div id='footer'>
                         <h4 id='logo'>EASTOON PRODUCTS CO., LTD.</h4>
                         <p>Address:1F., No.15, Ln. 78, Zhongzheng Rd., Xinzhuang Dist., New Taipei City 24243, Taiwan</p>
                         <p>Tel: +886 2 2277 0031</p>
                         <OverlayTrigger placement="top" overlay={tooltip}>
-                            <p><a href="mailto:angel@eastoon.com.tw">Contact Us</a></p>
+                            <a href="mailto:angel@eastoon.com.tw">Contact Us</a>
                         </OverlayTrigger>
                 </div>
             </div>

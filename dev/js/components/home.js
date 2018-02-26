@@ -37,7 +37,7 @@ function Home() {
                 <p id='intro-descrip'>Available brand such as Adler, brother, Consew, Eastman, Fischbein, Juki, Kansai Special, Kingtex, Lewis, Merrow, Mitsubishi, New Long, Pegasus, Pfaff, Rimoldi, Reece, Singer, Siruba, Union Special, Yamato, Ha-1. Available parts – Presser feet, Throat Plate, Feed Dog, Loopers, Knives, Motors, Bobbins, Bobbin Case, Shuttle Hook, Binder and Folder, Needles, Scissors..etc.</p>
                 <br />
             </section>
-            <Homepagedisplay />
+                <Homepagedisplay />
             <section id='inter'>
                 <br />
                 <HomepageMachinelist />

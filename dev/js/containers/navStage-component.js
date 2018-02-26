@@ -67,7 +67,7 @@ class Stage extends Component {
 
                           </Nav>
                           <Nav pullRight>
-                            <ItemSearchAction ind='homepagesearch'/>
+                            <ItemSearchAction id='homepagesearch'/>
                           </Nav>
                         </Navbar.Collapse>
                 </Navbar>

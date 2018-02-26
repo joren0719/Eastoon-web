@@ -13,7 +13,7 @@ class HomepageMachinelist extends Component {
 
         return (
 
-            <div>
+            <div id='machinelist'>
                 <h1 id='headline'>We have...</h1>
                 <br />
                 <Row id='listitem'>

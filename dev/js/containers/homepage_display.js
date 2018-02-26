@@ -15,8 +15,6 @@ class Homepagedisplay extends Component {
         if (this.props.homepagedisplay==null){
             return(<div></div>)
         }else if (typeof this.props.homepagedisplay.description==='string'){
-            console.log();
-
             return(
                     <div className='hidden-display-panel'>
                         <div className='hidden_display_panel_header'>
